@@ -41,12 +41,11 @@ public class ReserveListTests {
 
         ListNode head = solution.reverseList(ln1);
         ListNode temp = head;//不再对head使用可以直接用head来输出 使用建议先获取出以防找不到头节点避免了重新获取
-
         while (temp != null) {
             actual = actual + temp.val + " ";
             temp = temp.next;
         }
-
+        System.out.println(actual);
         Assertions.assertEquals("5 4 3 2 1 ",actual);
     }
     @Test
@@ -63,7 +62,7 @@ public class ReserveListTests {
             actual = actual + temp.val + " ";
             temp = temp.next;
         }
-
+        System.out.println(actual);
         Assertions.assertEquals("2 1 ",actual);
     }
     @Test
@@ -77,6 +76,7 @@ public class ReserveListTests {
             actual = actual + temp.val + " ";
             temp = temp.next;
         }
+        System.out.println(actual);
         Assertions.assertEquals("",actual);
     }
 
